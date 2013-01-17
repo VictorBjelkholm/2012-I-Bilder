@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div id="wrapper">
+		<div id="toppen"></div>
 		<div id="header">
 			<!--<center><h1>2012 i bilder</h1></center>
 			<p>Detta året har varit ett snabbt år som startade med vinterkyla i Svalöv och slutade på ryssfest i Barcelona. Mycket av det som har hänt har ändå hänt och man borde vara glad åt att det faktiskt har hänt istället för att det inte händer något.</p>
@@ -40,12 +41,12 @@
 					{'filename': '2012_04_02-1850.jpg', 'comment': 'Skog på Visingsö', 'date': '2012/04/02'},
 					{'filename': '2012_04_06-2128.jpg', 'comment': 'Snö i Mariebo', 'date': '2012/04/06'},
 					{'filename': '2012_04_18-1908.jpg', 'comment': 'Rivning av Magasinet i Svalöv', 'date': '2012/04/18'},
-					{'filename': '2012_04_22-1428.jpg', 'comment': 'Svalöv, Me, Myself and pretty I, sittandes i en säng', 'date': '2012/04/22'},
+					{'filename': '2012_04_22-1428.jpg', 'comment': 'Svalöv, Myself and I, sittandes i en säng', 'date': '2012/04/22'},
 					{'filename': '2012_05_10-0051.jpg', 'comment': 'Svalöv, Hip fest på Fridhem', 'date': '2012/05/10'},
-					{'filename': '2012_05_12-0148.jpg', 'comment': 'Svalöv, Statsminister Mårten, sittandes vid en bok', 'date': '2012/05/12'},
+					{'filename': '2012_05_12-0148.jpg', 'comment': 'Svalöv, Mårten, sittandes vid en bok', 'date': '2012/05/12'},
 					{'filename': '2012_05_16-1609.jpg', 'comment': 'Svalöv, öde lager', 'date': '2012/05/16'},
 					{'filename': '2012_05_21-0556.jpg', 'comment': 'Svalöv, Rummet på Fridhem', 'date': '2012/05/21'},
-					{'filename': '2012_05_21-0557.jpg', 'comment': 'Svalöv, Me, Myself and pretty I, liggandes i en säng', 'date': '2012/05/21'},
+					{'filename': '2012_05_21-0557.jpg', 'comment': 'Svalöv, Myself and I, liggandes i en säng', 'date': '2012/05/21'},
 					{'filename': '2012_05_22-1737.jpg', 'comment': 'Svalöv, sett från en flyktings ögon', 'date': '2012/05/22'},
 					{'filename': '2012_05_22-1855.jpg', 'comment': 'Lund, från samma persons ögon', 'date': '2012/05/22'},
 					{'filename': '2012_05_22-1955.jpg', 'comment': 'Finaste fliegplanet!', 'date': '2012/05/22'},
@@ -87,21 +88,12 @@
       console.log(index + ': ' + value.filename);
       $('#images').append('<div class="image"><a href="imgs/' + value.filename + '" target="_blank"><img src="imgs/thumbs/' + value.filename + '" alt=""/></a><div class="imageDate">' + value.filename + '</div><div class="comment"><span style="float: right;">' + value.date + '</span><span style="float: left;">' + value.comment + '</span><div class="clear"></div></div></div>');
     });
-    
-
-$(document).ready(function(){
-	console.log('jQuery ready...');
-	$('img').live('mouseenter',function(){
-	});
-	$('img').live('mouseleave',function(){
-	});
-});
 
 window.onload = function() {
 	console.log('Window ready...');
 	$('#loadingIcon').remove();
 	$('#images').show();
-	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a></div>');
+	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a><br/><br/><a href="#toppen">Gå längst upp igen</a></div>');
 	$('#images').append('<div class="clear"></div>');
   var wall = new Masonry( document.getElementById('images') );
 };
