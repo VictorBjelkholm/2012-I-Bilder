@@ -17,7 +17,7 @@
 		<div id="intro">
 			<p>Detta är hur mitt år sett ut om man kollar på de bilder jag själv tagit. Året har varit snabbt och delvis kallt men också varit en vändning för det varmare. Mycket av det som har hänt har ändå hänt och man borde vara glad åt att det faktiskt har hänt istället för att det inte händer något.</p>
 			<p>Året började med en typiskt, kall nyårsafton i Jönköping. Det fortsatte med en vår i Svalöv och efter våren blev det en envägsbiljett till Girona, Spanien. Hamnade dock i Barcelona efter ett par dagar där både sommaren, hösten och vintern spenderades.</p>
-			<p>Vänta på att bilderna dyker upp nedanför. Klicka på en bild för att se den med riktig upplösning i nytt fönster.</p>
+			<p>Vänta på att bilderna dyker upp nedanför. Klicka på en bild för att se en större versionen i ett nytt fönster.</p>
 		</div>
 		<center id="loadingIcon"><img src="imgs/ajax-loader.gif" alt=""></center>
 		<div id="images" style="display: none;">
@@ -103,6 +103,7 @@ window.onload = function() {
 	console.log('Window ready...');
 	$('#loadingIcon').remove();
 	$('#images').show();
+	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a></div>');
 	$('#images').append('<div class="clear"></div>');
   var wall = new Masonry( document.getElementById('images') );
 };
