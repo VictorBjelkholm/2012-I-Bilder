@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
 <title>2012 i Bilder (och lite text)</title>
+<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -41,12 +42,12 @@
 					{'filename': '2012_04_02-1850.jpg', 'comment': 'Skog på Visingsö', 'date': '2012/04/02'},
 					{'filename': '2012_04_06-2128.jpg', 'comment': 'Snö i Mariebo', 'date': '2012/04/06'},
 					{'filename': '2012_04_18-1908.jpg', 'comment': 'Rivning av Magasinet i Svalöv', 'date': '2012/04/18'},
-					{'filename': '2012_04_22-1428.jpg', 'comment': 'Svalöv, Myself and I, sittandes i en säng', 'date': '2012/04/22'},
+					{'filename': '2012_04_22-1428.jpg', 'comment': 'Svalöv, Myself and I, i en säng', 'date': '2012/04/22'},
 					{'filename': '2012_05_10-0051.jpg', 'comment': 'Svalöv, Hip fest på Fridhem', 'date': '2012/05/10'},
 					{'filename': '2012_05_12-0148.jpg', 'comment': 'Svalöv, Mårten, sittandes vid en bok', 'date': '2012/05/12'},
 					{'filename': '2012_05_16-1609.jpg', 'comment': 'Svalöv, öde lager', 'date': '2012/05/16'},
 					{'filename': '2012_05_21-0556.jpg', 'comment': 'Svalöv, Rummet på Fridhem', 'date': '2012/05/21'},
-					{'filename': '2012_05_21-0557.jpg', 'comment': 'Svalöv, Myself and I, liggandes i en säng', 'date': '2012/05/21'},
+					{'filename': '2012_05_21-0557.jpg', 'comment': 'Svalöv, Jag, liggandes i en säng', 'date': '2012/05/21'},
 					{'filename': '2012_05_22-1737.jpg', 'comment': 'Svalöv, sett från en flyktings ögon', 'date': '2012/05/22'},
 					{'filename': '2012_05_22-1855.jpg', 'comment': 'Lund, från samma persons ögon', 'date': '2012/05/22'},
 					{'filename': '2012_05_22-1955.jpg', 'comment': 'Finaste fliegplanet!', 'date': '2012/05/22'},
@@ -77,8 +78,8 @@
 					{'filename': '2012_12_24-1557.jpg', 'comment': 'Jönköping, Systerson', 'date': '2012/12/24'},
 					{'filename': '2012_12_24-1730.jpg', 'comment': 'Bovar hjälper polisen i Jönköping', 'date': '2012/12/24'},
 					{'filename': '2012_12_24-2211.jpg', 'comment': 'Rasmus och Mårten påväg till Visingsö', 'date': '2012/12/24'},
-					{'filename': '2012_12_28-2318.jpg', 'comment': 'Carrer de Sant Elm, Barcelona', 'date': '2012/12/28'},
-					{'filename': '2013_01_02-1144.jpg', 'comment': 'Gata i staden', 'date': '2013/01/02'}
+					{'filename': '2012_12_28-2318.jpg', 'comment': 'Gata i staden', 'date': '2012/12/28'},
+					{'filename': '2013_01_02-1144.jpg', 'comment': 'Carrer de Sant Elm, Barcelona', 'date': '2013/01/02'}
     ];
 
     console.log('Variable images have been created: ' + images);
@@ -93,7 +94,7 @@ window.onload = function() {
 	console.log('Window ready...');
 	$('#loadingIcon').remove();
 	$('#images').show();
-	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a><br/><br/><a href="#toppen">Gå längst upp igen</a></div>');
+	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a><br/><br/><a href="#toppen" style="font-size: 1.5em;">Gå längst upp igen</a></div>');
 	$('#images').append('<div class="clear"></div>');
   var wall = new Masonry( document.getElementById('images') );
 };
