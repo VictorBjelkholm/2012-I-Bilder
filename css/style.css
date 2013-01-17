@@ -45,7 +45,7 @@ body {
 }
 
 #footer {
-	width: 960px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -53,14 +53,24 @@ body {
 	color: #C0DBEB;
 }
 
+img, .image {
+	width: 440px;
+}
+
 img {
-	max-width: 220px;
-	filter: grayscale(70%);
+	/*filter: grayscale(70%);
 	-webkit-filter: grayscale(70%); -moz-filter: grayscale(70%);
-	-ms-filter: grayscale(70%); -o-filter: grayscale(70%);
-	border-radius: 5px;
+	-ms-filter: grayscale(70%); -o-filter: grayscale(70%);*/
+	border-radius: 5px 5px 0px 0px;
 	z-index: 1;
 	box-shadow: 0px 0px 1px 0px black;
+	margin-bottom: -3px;
+}
+
+.image {
+	margin: 10px;
+	margin-bottom: 20px;
+	float: left;
 }
 
 h1 {
@@ -68,21 +78,34 @@ h1 {
 }
 
 .comment {
-	position: absolute;
-	width: 500px;
-	display: none;
-	background-color: black;
-	padding: 4px;
+	position: relative;
+	width: 100%;
+	background-color: #000;
+	font-size: 1.2em;
+	box-shadow: 0px 0px 1px 0px black;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: white;
 	z-index: 100;
+}
+
+.comment span {
+	opacity: 0.8;
+}
+
+.image:hover {
+	box-shadow: 0px 3px 10px 0px black;
+/*border-radius: 20px;*/
+margin-top: 5px;
 }
 
 img:hover {
 	filter: grayscale(0%);
 -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%);
 -ms-filter: grayscale(0%); -o-filter: grayscale(0%);
-box-shadow: 0px 3px 10px 0px black;
-/*border-radius: 20px;*/
-margin-top: -5px;
+
 }
 
 #images {
@@ -91,11 +114,6 @@ margin-top: -5px;
 	display: none;
 }
 
-.image {
-	width: 220px;
-	margin: 10px;
-	float: left;
-}
 
 .clear {
 	clear: both;
