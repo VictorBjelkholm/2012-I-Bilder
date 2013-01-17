@@ -1,0 +1,89 @@
+/* This is my apps CSS */
+
+body {
+	background-color: #87B2C7;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0px;
+	color: white;
+}
+
+#header {
+	margin: 0 auto;
+	width: 960px;
+	padding: 0px;
+	height: 430px;
+	background-image: url('../imgs/header.jpg');
+	/*border-bottom: 15px solid #87B2C7;*/
+}
+
+#intro {
+	font-family: Georgia;
+	font-size: 1.3em;
+	line-height: 1.4em;
+	padding: 20px;
+	/*border-bottom: 15px solid #87B2C7;*/
+	background-color: #466b7d;
+}
+
+#intro p {
+	opacity: 0.8;
+	margin-bottom: 30px;
+}
+
+#intro p:last-child {
+	margin-bottom: 5px;
+}
+
+.imageDate {
+	display: none;
+}
+
+img {
+	max-width: 220px;
+	filter: grayscale(70%);
+-webkit-filter: grayscale(70%); -moz-filter: grayscale(70%);
+-ms-filter: grayscale(70%); -o-filter: grayscale(70%);
+border-radius: 10px;
+z-index: 1;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.comment {
+	position: absolute;
+	width: 500px;
+	display: none;
+	background-color: black;
+	padding: 4px;
+	z-index: 100;
+}
+
+img:hover {
+	filter: grayscale(0%);
+-webkit-filter: grayscale(0%); -moz-filter: grayscale(0%);
+-ms-filter: grayscale(0%); -o-filter: grayscale(0%);
+box-shadow: inset -10px -10px 10px red;
+border-radius: 20px;
+}
+
+#images {
+	clear: both;
+	background-color: #466b7d;
+	display: none;
+}
+
+.image {
+	width: 220px;
+	margin: 10px;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}

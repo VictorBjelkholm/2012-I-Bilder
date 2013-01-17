@@ -4,15 +4,106 @@
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
 <title>2012 i Bilder (och lite text)</title>
+<link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
+	<div id="wrapper">
+		<div id="header">
+			<!--<center><h1>2012 i bilder</h1></center>
+			<p>Detta året har varit ett snabbt år som startade med vinterkyla i Svalöv och slutade på ryssfest i Barcelona. Mycket av det som har hänt har ändå hänt och man borde vara glad åt att det faktiskt har hänt istället för att det inte händer något.</p>
+			<p>Kolla på dessa bilder och se de som fönster ut mot verkligheten.</p>-->
+		</div>
+		<div id="intro">
+			<p>Detta är hur mitt år sett ut om man kollar på de bilder jag själv tagit. Året har varit snabbt och delvis kallt men också varit en vändning för det varmare. Mycket av det som har hänt har ändå hänt och man borde vara glad åt att det faktiskt har hänt istället för att det inte händer något.</p>
+			<p>Året började med en typiskt, kall nyårsafton i Jönköping. Det fortsatte med en vår i Svalöv och efter våren blev det en envägsbiljett till Girona, Spanien. Hamnade dock i Barcelona efter ett par dagar där både sommaren, hösten och vintern spenderades.</p>
+			<p>Vänta på att bilderna dyker upp nedanför. Klicka på en bild för att förstora den.</p>
+		</div>
+		<div id="images" style="display: none;">
+		</div>
+	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://raw.github.com/desandro/vanilla-masonry/master/masonry.js"></script>
 <script>
+    
+    var images = [
+					{'filename': '2012_01_01-0541.jpg', 'comment': 'Nyårsafton 2012 - 2013. Efterhängsen tjej.'},
+					{'filename': '2012_01_03-1427.jpg', 'comment': ''},
+					{'filename': '2012_01_22-0306.jpg', 'comment': ''},
+					{'filename': '2012_02_23-1728.jpg', 'comment': ''},
+					{'filename': '2012_02_26-2109.jpg', 'comment': ''},
+					{'filename': '2012_03_05-0242.jpg', 'comment': ''},
+					{'filename': '2012_03_27-1919.jpg', 'comment': ''},
+					{'filename': '2012_04_01-1816.jpg', 'comment': ''},
+					{'filename': '2012_04_01-1909.jpg', 'comment': ''},
+					{'filename': '2012_04_02-1850.jpg', 'comment': ''},
+					{'filename': '2012_04_06-2128.jpg', 'comment': ''},
+					{'filename': '2012_04_18-1908.jpg', 'comment': ''},
+					{'filename': '2012_04_22-1428.jpg', 'comment': ''},
+					{'filename': '2012_05_10-0051.jpg', 'comment': ''},
+					{'filename': '2012_05_12-0148.jpg', 'comment': ''},
+					{'filename': '2012_05_16-1609.jpg', 'comment': ''},
+					{'filename': '2012_05_21-0556.jpg', 'comment': ''},
+					{'filename': '2012_05_21-0557.jpg', 'comment': ''},
+					{'filename': '2012_05_22-1737.jpg', 'comment': ''},
+					{'filename': '2012_05_22-1855.jpg', 'comment': ''},
+					{'filename': '2012_05_22-1955.jpg', 'comment': ''},
+					{'filename': '2012_05_23-1236.jpg', 'comment': ''},
+					{'filename': '2012_05_24-1002.jpg', 'comment': ''},
+					{'filename': '2012_05_24-1327.jpg', 'comment': ''},
+					{'filename': '2012_05_25-1832.jpg', 'comment': ''},
+					{'filename': '2012_05_26-1102.jpg', 'comment': ''},
+					{'filename': '2012_05_26-1615.jpg', 'comment': ''},
+					{'filename': '2012_06_03-2004.jpg', 'comment': ''},
+					{'filename': '2012_06_06-2120.jpg', 'comment': ''},
+					{'filename': '2012_06_10-2200.jpg', 'comment': ''},
+					{'filename': '2012_06_18-0949.jpg', 'comment': ''},
+					{'filename': '2012_06_19-0006.jpg', 'comment': ''},
+					{'filename': '2012_06_24-2122.jpg', 'comment': ''},
+					{'filename': '2012_06_30-2108.jpg', 'comment': ''},
+					{'filename': '2012_07_08-1631.jpg', 'comment': ''},
+					{'filename': '2012_07_18-0435.jpg', 'comment': ''},
+					{'filename': '2012_07_21-1910.jpg', 'comment': ''},
+					{'filename': '2012_07_22-0027.jpg', 'comment': ''},
+					{'filename': '2012_07_22-1855.jpg', 'comment': ''},
+					{'filename': '2012_07_22-1923.jpg', 'comment': ''},
+					{'filename': '2012_12_08-1904.jpg', 'comment': ''},
+					{'filename': '2012_12_18-2316.jpg', 'comment': ''},
+					{'filename': '2012_12_22-2343.jpg', 'comment': ''},
+					{'filename': '2012_12_23-1054.jpg', 'comment': ''},
+					{'filename': '2012_12_23-2333.jpg', 'comment': ''},
+					{'filename': '2012_12_24-1557.jpg', 'comment': ''},
+					{'filename': '2012_12_24-1730.jpg', 'comment': ''},
+					{'filename': '2012_12_24-2211.jpg', 'comment': ''},
+					{'filename': '2012_12_28-2318.jpg', 'comment': ''},
+					{'filename': '2013_01_02-1144.jpg', 'comment': ''},
+					{'filename': '2013_01_03-1108.jpg', 'comment': ''},
+					{'filename': '2013_01_03-1352.jpg', 'comment': 'Blablabla bla bal ballba alba lba abl ab abl lab lba l bla lba lba'}
+    ];
+
+    console.log('Variable images have been created: ' + images);
+
+    console.log('In the $.each we go!');
+    $.each(images, function(index, value) {
+      console.log(index + ': ' + value.filename);
+      $('#images').append('<div class="image"><a href="imgs/' + value.filename + '" target="_blank"><img src="imgs/thumbs/' + value.filename + '" alt=""/></img><div class="imageDate">' + value.filename + '</div><div class="comment">' + value.comment + '</div></div>');
+    });
+    
+
 $(document).ready(function(){
-    console.log('jQuery ready...');
+	console.log('jQuery ready...');
+	$('#images').append('<div class="clear"></div>');
+	$('#images').show();
+
+	$('img').live('mouseenter',function(){
+	});
+	$('img').live('mouseleave',function(){
+	});
 });
+
+window.onload = function() {
+  var wall = new Masonry( document.getElementById('images') );
+};
 </script>
 </body>
 </html>
