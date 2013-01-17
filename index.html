@@ -82,16 +82,16 @@
 					{'filename': '2013_01_02-1144.jpg', 'comment': 'Carrer de Sant Elm, Barcelona', 'date': '2013/01/02'}
     ];
 
-    console.log('Variable images have been created: ' + images);
+    //console.log('Variable images have been created: ' + images);
 
-    console.log('In the $.each we go!');
+    //console.log('In the $.each we go!');
     $.each(images, function(index, value) {
-      console.log(index + ': ' + value.filename);
+      //console.log(index + ': ' + value.filename);
       $('#images').append('<div class="image"><a href="imgs/' + value.filename + '" target="_blank"><img src="imgs/thumbs/' + value.filename + '" alt=""/></a><div class="imageDate">' + value.filename + '</div><div class="comment"><span style="float: right;">' + value.date + '</span><span style="float: left;">' + value.comment + '</span><div class="clear"></div></div></div>');
     });
 
 window.onload = function() {
-	console.log('Window ready...');
+	//console.log('Window ready...');
 	$('#loadingIcon').remove();
 	$('#images').show();
 	$('#images').append('<div id="footer">Sidan är skapad med öppen källkod och kan hämtas här: <a href="https://github.com/VictorBjelkholm/2012-I-Bilder" target="_blank">https://github.com/VictorBjelkholm/2012-I-Bilder</a><br/><br/><a href="#toppen" style="font-size: 1.5em;">Gå längst upp igen</a></div>');
